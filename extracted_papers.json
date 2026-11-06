@@ -1,0 +1,328 @@
+[
+  {
+    "arxiv_id": "2503.18382",
+    "title": "PP-FormulaNet: Bridging Accuracy and Efficiency in Advanced Formula Recognition",
+    "authors": [
+      "Hongen Liu",
+      "Cheng Cui",
+      "Yuning Du",
+      "Yi Liu",
+      "Gang Pan"
+    ],
+    "publication_date": "2025-03-24",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2503.18382.pdf",
+    "arxiv_page_url": "https://arxiv.org/abs/2503.18382",
+    "github_url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "is_official_code": true,
+    "tasks": [
+      "document-understanding",
+      "computer-vision"
+    ],
+    "methods": [
+      "deep-learning",
+      "ocr",
+      "distillation"
+    ],
+    "models": [
+      "PP-FormulaNet-L",
+      "PP-FormulaNet-S",
+      "UniMERNet",
+      "Pix2tex",
+      "GPT-4o",
+      "Qwen2.5-VL-72B"
+    ],
+    "datasets": [
+      "UniMERNet-1M",
+      "arXiv-4M",
+      "Formula Mining System Dataset"
+    ],
+    "sota_claims": [
+      {
+        "benchmark": "UniMERNet-1M + arXiv-4M (5 test sets)",
+        "metric": "Avg-BLEU",
+        "value": "0.9213 vs 0.8613 (~+6%)",
+        "comparison_target": "UniMERNet"
+      },
+      {
+        "benchmark": "Inference speed (batch=15, GPU)",
+        "metric": "Speedup Factor",
+        "value": "16x faster",
+        "comparison_target": "UniMERNet"
+      },
+      {
+        "benchmark": "Inference speed (batch=1, GPU)",
+        "metric": "Speedup Factor",
+        "value": "11x faster",
+        "comparison_target": "UniMERNet"
+      }
+    ],
+    "abstract": "[Paraphrase] PP-FormulaNet is a formula recognition model that converts mathematical expressions in document images into structured symbolic formats such as LaTeX. It comes in two variants: PP-FormulaNet-L for accuracy, reported to beat UniMERNet by about 6%, and PP-FormulaNet-S for speed, reported to run over 16 times faster. A Formula Mining System extracts large volumes of high-quality formula data to improve robustness. Code and models are released through PaddleOCR and PaddleX."
+  },
+  {
+    "arxiv_id": "2510.13998",
+    "title": "BitNet Distillation",
+    "authors": [
+      "Xun Wu",
+      "Shaohan Huang",
+      "Wenhui Wang",
+      "Ting Song",
+      "Li Dong",
+      "Yan Xia",
+      "Furu Wei"
+    ],
+    "publication_date": "2025-10-15",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2510.13998.pdf",
+    "arxiv_page_url": "https://arxiv.org/abs/2510.13998",
+    "github_url": "https://github.com/microsoft/BitNet",
+    "is_official_code": true,
+    "tasks": [
+      "natural-language-processing",
+      "model-compression"
+    ],
+    "methods": [
+      "quantization",
+      "distillation",
+      "continual-pretraining"
+    ],
+    "models": [
+      "BitDistill",
+      "BitNet-SFT",
+      "FP16-SFT",
+      "Qwen3-0.6B",
+      "Qwen3-1.7B",
+      "Qwen3-4B",
+      "Qwen2.5-0.5B",
+      "Gemma3-1B"
+    ],
+    "datasets": [
+      "MNLI",
+      "QNLI",
+      "SST-2",
+      "CNN/DailyMail",
+      "FALCON corpus"
+    ],
+    "sota_claims": [
+      {
+        "benchmark": "CPU inference (16 threads)",
+        "metric": "Speedup Factor",
+        "value": "2.65x",
+        "comparison_target": "Full-precision FP16"
+      },
+      {
+        "benchmark": "Memory footprint",
+        "metric": "Memory Reduction",
+        "value": "up to 10x",
+        "comparison_target": "Full-precision FP16"
+      },
+      {
+        "benchmark": "MNLI (Qwen3-0.6B)",
+        "metric": "Accuracy",
+        "value": "88.17%",
+        "comparison_target": "FP16-SFT (88.01%)"
+      },
+      {
+        "benchmark": "MNLI (Qwen3-0.6B)",
+        "metric": "Accuracy",
+        "value": "88.17% vs 74.09%",
+        "comparison_target": "BitNet-SFT"
+      }
+    ],
+    "abstract": "[Paraphrase] BitNet Distillation (BitDistill) is a lightweight pipeline that fine-tunes off-the-shelf full-precision LLMs such as Qwen into 1.58-bit (ternary) models for specific downstream tasks. It combines SubLN normalization, multi-head attention distillation, and continual pre-training as a warm-up. Results are comparable to the full-precision counterparts across model sizes, with up to 10x memory savings and 2.65x faster CPU inference."
+  },
+  {
+    "arxiv_id": "2607.18859",
+    "title": "PhoenixRepair: Rethinking Repair Strategy Exploration in Software Agents",
+    "authors": [
+      "Tianyue Jiang",
+      "Yanlin Wang",
+      "Xin He",
+      "Daya Guo",
+      "Jiachi Chen",
+      "Ming Wen",
+      "Ensheng Shi",
+      "Xilin Liu",
+      "Yuchi Ma",
+      "Guanbin Li"
+    ],
+    "publication_date": "2026-07-21",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18859.pdf",
+    "arxiv_page_url": "https://arxiv.org/abs/2607.18859",
+    "github_url": "https://github.com/DeepSoftwareAnalytics/PhoenixRepair",
+    "is_official_code": true,
+    "tasks": [
+      "code-generation",
+      "agents"
+    ],
+    "methods": [
+      "multi-agent",
+      "iterative-refinement",
+      "fault-localization"
+    ],
+    "models": [
+      "DeepSeek-V3.1",
+      "DeepSeek-V3.2",
+      "Qwen3-Coder-Plus",
+      "GLM-4.7",
+      "MiniMax-M2.5",
+      "LocAgent"
+    ],
+    "datasets": [
+      "SWE-bench Verified"
+    ],
+    "sota_claims": [
+      {
+        "benchmark": "SWE-bench Verified (DeepSeek-V3.1)",
+        "metric": "Pass@1",
+        "value": "66.0% (+7.8% relative)",
+        "comparison_target": "SWE-agent (61.2%)"
+      },
+      {
+        "benchmark": "SWE-bench Verified (MiniMax-M2.5)",
+        "metric": "Pass@1",
+        "value": "76.0%",
+        "comparison_target": "SWE-agent (72.2%)"
+      },
+      {
+        "benchmark": "SWE-bench Verified (DeepSeek-V3.2)",
+        "metric": "Pass@1",
+        "value": "74.4%",
+        "comparison_target": "SWE-agent (69.4%)"
+      },
+      {
+        "benchmark": "SWE-bench Verified (DeepSeek-V3.2)",
+        "metric": "Function Acc@1 (fault localization)",
+        "value": "66.64%",
+        "comparison_target": "SWE-agent (63.42%)"
+      }
+    ],
+    "abstract": "[Paraphrase] PhoenixRepair is a multi-agent framework for LLM-based issue resolution. It argues that existing agents explore repair strategies too narrowly, both across candidate edit locations and across attempts at each location. It samples multiple locations, optionally adds graph-based localization for hard tasks, and iteratively reflects on and refines patches before a final round informed by all earlier attempts. On SWE-bench Verified it reports a 7.8% relative gain over SWE-agent with DeepSeek-V3.1 and 76.0% Pass@1 with MiniMax-M2.5."
+  },
+  {
+    "arxiv_id": "2507.23370",
+    "title": "Trae Agent: An LLM-based Agent for Software Engineering with Test-time Scaling",
+    "authors": [
+      "Pengfei Gao",
+      "Zhao Tian",
+      "Xiangxin Meng",
+      "Xinchen Wang",
+      "Ruida Hu",
+      "Yuanan Xiao",
+      "Yizhou Liu",
+      "Zhao Zhang",
+      "Chao Peng"
+    ],
+    "publication_date": "2025-07-31",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2507.23370.pdf",
+    "arxiv_page_url": "https://arxiv.org/abs/2507.23370",
+    "github_url": "https://github.com/bytedance/trae-agent",
+    "is_official_code": true,
+    "tasks": [
+      "code-generation",
+      "agents"
+    ],
+    "methods": [
+      "test-time-scaling",
+      "ensemble-reasoning",
+      "patch-pruning"
+    ],
+    "models": [
+      "Trae Agent",
+      "Gemini 2.5 Pro",
+      "Claude 3.7 Sonnet",
+      "GPT-4.1"
+    ],
+    "datasets": [
+      "SWE-bench Verified",
+      "SWE-bench"
+    ],
+    "sota_claims": [
+      {
+        "benchmark": "SWE-bench Verified (leaderboard)",
+        "metric": "Pass@1",
+        "value": "75.20%",
+        "comparison_target": "SWE-bench Verified leaderboard (1st place)"
+      },
+      {
+        "benchmark": "SWE-bench Verified (3 LLMs)",
+        "metric": "Pass@1",
+        "value": "+10.22% average",
+        "comparison_target": "Four ensemble reasoning baselines"
+      },
+      {
+        "benchmark": "SWE-bench Verified (Claude 3.7 Sonnet, N=3)",
+        "metric": "Pass@1",
+        "value": "66.40%",
+        "comparison_target": "Augment w/ Pruning (64.33%)"
+      }
+    ],
+    "abstract": "[Paraphrase] Trae Agent is presented as the first agent-based ensemble reasoning approach for repository-level issue resolution. It treats the task as an optimal solution search problem and uses modular agents for patch generation, pruning and selection. Across three LLMs on SWE-bench it improves Pass@1 by 10.22% on average over four ensemble baselines and ranks first on the SWE-bench Verified leaderboard at 75.20%. The project is open source."
+  },
+  {
+    "arxiv_id": "2503.11651",
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "authors": [
+      "Jianyuan Wang",
+      "Minghao Chen",
+      "Nikita Karaev",
+      "Andrea Vedaldi",
+      "Christian Rupprecht",
+      "David Novotny"
+    ],
+    "publication_date": "2025-03-14",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2503.11651.pdf",
+    "arxiv_page_url": "https://arxiv.org/abs/2503.11651",
+    "github_url": "https://github.com/facebookresearch/vggt",
+    "is_official_code": true,
+    "tasks": [
+      "computer-vision",
+      "3d-reconstruction"
+    ],
+    "methods": [
+      "transformer",
+      "feed-forward-reconstruction"
+    ],
+    "models": [
+      "VGGT",
+      "DUSt3R",
+      "MASt3R",
+      "VGGSfM",
+      "COLMAP",
+      "CoTracker2",
+      "DINO"
+    ],
+    "datasets": [
+      "RealEstate10K",
+      "CO3Dv2",
+      "DTU",
+      "IMC",
+      "TAP-Vid"
+    ],
+    "sota_claims": [
+      {
+        "benchmark": "RealEstate10K camera pose (10 frames)",
+        "metric": "AUC@30",
+        "value": "85.3 (93.5 with BA)",
+        "comparison_target": "VGGSfM v2 (78.9)"
+      },
+      {
+        "benchmark": "CO3Dv2 camera pose (10 frames)",
+        "metric": "AUC@30",
+        "value": "88.2 (91.8 with BA)",
+        "comparison_target": "VGGSfM v2 (83.4)"
+      },
+      {
+        "benchmark": "Camera pose runtime (H100)",
+        "metric": "Speedup Factor",
+        "value": "~0.2s vs ~10s",
+        "comparison_target": "VGGSfM v2"
+      },
+      {
+        "benchmark": "DTU multi-view depth (no GT cameras)",
+        "metric": "Chamfer distance (lower is better)",
+        "value": "0.382",
+        "comparison_target": "DUSt3R (1.741)"
+      }
+    ],
+    "abstract": "[Paraphrase] VGGT is a feed-forward transformer that infers camera parameters, point maps, depth maps and 3D point tracks from one, a few or hundreds of views. It reconstructs in under a second and is reported to outperform alternatives that need geometry-based post-processing, reaching state-of-the-art results on camera estimation, multi-view depth, dense point cloud reconstruction and point tracking. Code and models are public."
+  }
+]
